@@ -12,12 +12,10 @@
  */
 
 async function filterTodosByKeyword(keyword) {
-    let data = await fetch ('https://jsonplaceholder.typicode.com/todos', options)
+    let res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    let data = await res.json();
     
-    let result = [];
-    data.filter((el) => result.push(el.title.includes(keyword)))
-
-    return result
+    return data.filter((el) => el.title.toLowerCase().includes(keyword.toLowerCase()));
 }
 
 // export 수정 불가

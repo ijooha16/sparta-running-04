@@ -12,11 +12,11 @@
  */
 function transformUsers(users) {
     return users.map((el) => {
-        el.fullName = `${el.firstName} ${el.lastName}`;
-        el.isAdult = el.age >= 20 ? true : flase;
-
-        return el;
-    })
+        return {
+        fullName: `${el.firstName} ${el.lastName}`,
+        isAdult: el.age >= 20 ? true : false
+        };
+    });
 }
 
 // export 수정 불가

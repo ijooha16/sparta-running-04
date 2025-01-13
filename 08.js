@@ -12,7 +12,10 @@
  * @returns {Promise<string[]>}
  */
 async function extractNames(url) {
-    
+    let res = await fetch (url);
+    let data = await res.json();
+
+    return data.result.records.map((el) => el.detail.name);
 }
 
 // export 수정 불가
