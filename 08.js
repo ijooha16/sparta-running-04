@@ -11,7 +11,9 @@
  * @param {string} url
  * @returns {Promise<string[]>}
  */
-async function extractNames(url) {}
+async function extractNames(url) {
+    
+}
 
 // export 수정 불가
 export { extractNames };
